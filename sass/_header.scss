@@ -1,0 +1,124 @@
+/* CONTENEDOR GENERAL BODY */
+.contenedor-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    max-width: $maxw;
+    border: none;
+    border-radius: 22px;
+    box-shadow: $shadow;
+    margin-top: 25px;
+    background: $beige;
+}
+
+/* NAVBAR */
+.navbar.bg-body-tertiary {
+    background: $orange !important;
+    border: 2px solid $black;
+    border-radius: 22px;
+    box-shadow: $shadow;
+    padding: 0.6rem 1rem;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: #000 !important;
+}
+
+.navbar .nav-link {
+    color: #2a2a2a !important;
+    font-weight: 600;
+
+    &:hover {
+        color: #000 !important;
+    }
+}
+
+.dropdown-item:hover {
+    color: #000 !important;
+}
+
+.dropdown-menu {
+    border-radius: 12px;
+    border: 1px solid $black;
+}
+
+.logo-nav {
+    height: 55px;
+    width: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+/* ICONOS CABECERA */
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    color: #2a2a2a;
+    padding: 0.35rem 0.5rem;
+    border-radius: 12px;
+    border: 2px solid $black;
+    background: #fff;
+    transition: 0.15s ease;
+
+    &:hover {
+        background: $accent-green;
+        color: #fff;
+        border-color: #000000;
+        transition: all 0.2s ease;
+    }
+}
+
+/* BUSCADOR */
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 4px;
+}
+
+.search__input {
+    width: 200px;
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 12px;
+    border: 2px solid $black;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.95rem;
+    background: #fff;
+    transition: 0.2s ease;
+
+    &:focus {
+        border-color: #000;
+        outline: none;
+    }
+}
+
+.search__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #000;
+    padding: 0.35rem 0.55rem;
+    border-radius: 12px;
+    border: 2px solid $black;
+    background: #fff;
+    transition: 0.15s ease;
+    cursor: pointer;
+
+    &:hover {
+        background: #f7f7f7;
+        color: #000;
+    }
+}
