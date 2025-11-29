@@ -1,15 +1,52 @@
-// Colores
-$bg: #ffffff;
-$text: #1a1a1a;
-$beige: hsl(45, 34%, 86%);
-$orange: #e3a75a;
-$black: #000000;
+/* ============================================
+   VARIABLES – PALETA 1989 (Taylor's Version)
+   ============================================ */
 
-// Extras
-$radius: 16px;
-$shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-$maxw: 1200px;
+/* ===== FONDOS PRINCIPALES ===== */
+$color-bg: #F3F6F9; // Fondo del body
+$color-surface: #FFFFFF; // Cards, navbar limpia, cajas
+$color-surface-alt: #E9DCC9; // Superficie pastel (arena)
+
+/* ===== TEXTOS ===== */
+$color-text: #0F172A; // Texto principal
+$color-text-muted: #6B7280; // Texto secundario
+$color-heading: #3A4F63; // Titulares / acentos fuertes
+
+// Alias de fondo y texto
+$bg: $color-bg;
+$text: $color-text;
+
+// Alias para nombres que ya usabas antes
+$arena: $color-surface-alt; // beige arena
+$gris-suave: $color-text-muted; // gris texto secundario
+$azul-profundo: $color-heading; // azul de títulos / links fuertes
+
+/* ===== ACENTOS (1989) ===== */
+$color-primary: #6F8FAF; // Azul gris suave
+$color-primary-strong: #3A4F63; // Hover / énfasis
+$color-accent-soft: #F7C8B5; // Pastel durazno (detalles)
+
+/* ===== BORDES, SOMBRAS ===== */
+$color-border-subtle: #D1D5DB;
+$shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+
+/* ===== TIPOGRAFÍA ===== */
 $ff: "Alan Sans", sans-serif;
 
-// Verde que usabas en hover (lo inventamos prolijo)
-$accent-green: #0b5e3a;
+/* ===== RADIOS ===== */
+$radius: 16px;
+
+/* ===== TAMAÑO MÁXIMO DE CONTENIDO ===== */
+$maxw: 1200px;
+
+/* ===== COLORES NEUTROS ===== */
+$white: #ffffff;
+$black: #000000;
+
+/* ============================================
+   🔥 ALIAS COMPATIBLES PARA QUE NADA SE ROMPA
+   (soporta archivos viejos que usaban $bg o $text)
+   ============================================ */
+
+$bg: $color-bg; // alias del fondo general
+$text: $color-text; // alias del texto principal

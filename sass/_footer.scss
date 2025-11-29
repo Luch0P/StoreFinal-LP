@@ -1,31 +1,16 @@
 .footer {
-    width: 100%;
-    background: #ddd;
-    border-top: 2px solid $black;
-    margin-top: auto;
+    background-color: $color-surface-alt; // antes $arena
+    color: $color-heading;
+    padding: 1.5rem 0;
+    text-align: center;
 
-    .social {
+    .footer-content {
         max-width: $maxw;
         margin: 0 auto;
-        padding: 24px 16px;
-        text-align: center;
-    }
+        font-size: 0.85rem;
 
-    .title {
-        font-weight: 700;
-        margin-bottom: 10px;
-    }
-
-    .social-links {
-        list-style: none;
-        display: flex;
-        gap: 18px;
-        justify-content: center;
-        margin: 0 0 10px 0;
-        padding: 0;
-    }
-
-    .copy {
-        font-size: 0.95rem;
+        .text-muted {
+            color: $color-text-muted;
+        }
     }
 }

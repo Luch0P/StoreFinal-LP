@@ -1,124 +1,230 @@
-/* CONTENEDOR GENERAL BODY */
-.contenedor-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-}
-
-/* HEADER */
 header {
     width: 100%;
+    padding-top: 1rem;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background-color: $color-surface-alt; // beige arena
+    border-radius: 20px;
+    padding: 0.7rem 1.2rem;
     max-width: $maxw;
-    border: none;
-    border-radius: 22px;
+    margin: 0 auto;
     box-shadow: $shadow;
-    margin-top: 25px;
-    background: $beige;
 }
 
-/* NAVBAR */
-.navbar.bg-body-tertiary {
-    background: $orange !important;
-    border: 2px solid $black;
-    border-radius: 22px;
-    box-shadow: $shadow;
-    padding: 0.6rem 1rem;
-}
-
-.navbar-brand {
-    font-weight: 700;
-    color: #000 !important;
-}
-
-.navbar .nav-link {
-    color: #2a2a2a !important;
-    font-weight: 600;
-
-    &:hover {
-        color: #000 !important;
-    }
-}
-
-.dropdown-item:hover {
-    color: #000 !important;
-}
-
-.dropdown-menu {
-    border-radius: 12px;
-    border: 1px solid $black;
-}
-
-.logo-nav {
-    height: 55px;
-    width: auto;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 8px;
-}
-
-/* ICONOS CABECERA */
-.icon-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.35rem;
-    color: #2a2a2a;
-    padding: 0.35rem 0.5rem;
-    border-radius: 12px;
-    border: 2px solid $black;
-    background: #fff;
-    transition: 0.15s ease;
-
-    &:hover {
-        background: $accent-green;
-        color: #fff;
-        border-color: #000000;
-        transition: all 0.2s ease;
-    }
-}
-
-/* BUSCADOR */
-.search {
-    position: relative;
+.navbar .container {
     display: flex;
     align-items: center;
-    gap: 6px;
-    margin-right: 4px;
+    justify-content: space-between;
+    gap: 1.5rem;
 }
 
-.search__input {
-    width: 200px;
-    opacity: 1;
-    pointer-events: auto;
-    border-radius: 12px;
-    border: 2px solid $black;
-    padding: 0.4rem 0.6rem;
-    font-size: 0.95rem;
-    background: #fff;
-    transition: 0.2s ease;
+/* IZQUIERDA: logo + Inicio + Categorías */
 
-    &:focus {
-        border-color: #000;
-        outline: none;
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        object-fit: cover;
     }
 }
 
-.search__button {
-    display: inline-flex;
+/* LISTAS DE LINKS (estilo base para izquierda y derecha) */
+
+.nav-links {
+    list-style: none;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    color: #000;
-    padding: 0.35rem 0.55rem;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+
+    li {
+        position: relative;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-heading;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: color 0.15s ease;
+
+        &:hover {
+            color: $color-primary-strong;
+        }
+
+        &.icon {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+/* Links principales (Inicio / Categorías) */
+.nav-links-main .nav-link.dropdown-toggle {
+    padding: 0;
+}
+
+/* DERECHA: contacto + user + carrito */
+.nav-links-right {
+    gap: 1.2rem;
+}
+
+/* DROPDOWNS BOOTSTRAP (categorías + carrito) */
+
+.nav-links .dropdown-menu {
     border-radius: 12px;
-    border: 2px solid $black;
-    background: #fff;
-    transition: 0.15s ease;
-    cursor: pointer;
+    border: 1px solid $color-border-subtle;
+    box-shadow: $shadow;
+    background-color: $color-surface;
+    padding: 0.4rem 0;
+    font-size: 0.85rem;
+}
+
+.nav-links .dropdown-item {
+    padding: 0.4rem 0.9rem;
+    color: $color-text;
 
     &:hover {
-        background: #f7f7f7;
-        color: #000;
+        background-color: $color-bg;
+        color: $color-primary-strong;
+    }
+}
+
+/* ================= BUSCADOR NAV ================= */
+
+.nav-search {
+    flex: 1;
+    max-width: 360px;
+    display: flex;
+    align-items: center;
+    background-color: rgba($color-surface, 0.9);
+    border-radius: 999px;
+    padding: 0.1rem;
+    border: 1px solid rgba($color-border-subtle, 0.8);
+}
+
+.nav-search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.85rem;
+    color: $color-text;
+
+    &::placeholder {
+        color: $color-text-muted;
+    }
+}
+
+.nav-search-btn {
+    border-radius: 999px;
+    border: none;
+    background-color: $color-primary;
+    color: $white;
+    padding: 0.35rem 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+
+    i {
+        font-size: 0.9rem;
+    }
+
+    &:hover {
+        background-color: $color-primary-strong;
+    }
+}
+
+/* ================= MINI CARRITO ================= */
+
+.cart-menu {
+    width: 260px;
+    padding: 0.6rem 0.8rem 0.8rem;
+}
+
+.cart-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid rgba($color-border-subtle, 0.7);
+    margin-bottom: 0.4rem;
+
+    span:first-child {
+        font-weight: 600;
+        font-size: 0.85rem;
+    }
+
+    .cart-count {
+        font-size: 0.8rem;
+        color: $color-text-muted;
+    }
+}
+
+.cart-item {
+    padding: 0.3rem 0;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.cart-item-name {
+    font-size: 0.8rem;
+    color: $color-text;
+}
+
+.cart-item-price {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $color-heading;
+}
+
+.cart-menu-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.4rem;
+    padding-top: 0.4rem;
+    border-top: 1px solid rgba($color-border-subtle, 0.7);
+    font-size: 0.8rem;
+
+    .cart-total-label {
+        color: $color-text-muted;
+    }
+
+    .cart-total-price {
+        font-weight: 600;
+        color: $color-heading;
+    }
+}
+
+.cart-menu-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+
+    .btn-sm {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.7rem;
     }
 }

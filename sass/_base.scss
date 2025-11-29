@@ -1,0 +1,100 @@
+/* ============================================
+   BASE / RESET GLOBAL
+   ============================================ */
+
+/* Reset básico para que todo parta igual */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body global usando variables semánticas */
+body {
+    font-family: $ff;
+    background-color: $bg; // color-bg (1989 theme)
+    color: $text; // color-text
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Imágenes */
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* Títulos más suaves por defecto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-heading;
+    font-weight: 700;
+}
+
+/* Enlaces */
+a {
+    color: $color-primary;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: $color-primary-strong;
+    }
+}
+
+/* Listas */
+ul,
+li {
+    list-style: none;
+}
+
+/* Contenedor global (opcional, varios parciales lo redefinen) */
+.container {
+    max-width: $maxw;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Estilos generales de botones (reforzados por parciales) */
+button,
+.btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: $ff;
+}
+
+/* Inputs y forms */
+input,
+textarea,
+select {
+    font-family: $ff;
+    border-radius: $radius;
+    border: 1px solid $color-border-subtle;
+    padding: 0.5rem 0.75rem;
+}
+
+/* Tabla limpia */
+table {
+    border-collapse: collapse;
+}
+
+/* Footer base */
+footer {
+    background-color: $color-surface-alt;
+    color: $color-heading;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+/* Espaciados globales */
+section {
+    width: 100%;
+}

@@ -1,14 +1,8 @@
-// VARIABLES
-@import 'variables';
-
-// HEADER / NAVBAR / BUSCADOR
-@import 'header';
-
-// HOME (index: hero, productos, botones, responsive)
-@import 'home';
-
-// FOOTER
-@import 'footer';
+@import "variables";
+@import "base";
+@import "header";
+@import "home";
+@import "footer";
 
 // PÁGINAS
 @import 'categoria1';
